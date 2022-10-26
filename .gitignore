@@ -1,0 +1,5 @@
+/knexfile.js
+node_modules/
+/db.js
+
+ git commit -m "Added Migration file, added seeds file, a  

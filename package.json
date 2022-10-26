@@ -1,0 +1,24 @@
+{
+  "name": "cargrail",
+  "version": "1.0.0",
+  "description": "## Heading",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkGiddings202/CarGrail.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkGiddings202/CarGrail/issues"
+  },
+  "homepage": "https://github.com/MarkGiddings202/CarGrail#readme",
+  "dependencies": {
+    "knex": "^2.3.0",
+    "pg": "^8.8.0"
+  }
+}
