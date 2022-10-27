@@ -10,12 +10,11 @@ class User {
 
     // User.getAllUser().then(result => console.log(result));
 
-    static async createUser(data){
-        const database = 'INSERT INTO user (user, completed) VALUES ($1, false) RETURNING*'
-        const dbResults = await pool.query(database,[data])
-        return dbResults.rows[0]
+    static async createUser(){
+        const database = `INSERT INTO users (first_name, last_name, email) VALUES ($1, $2, $3) RETURNING *`
+        const dbResults = await pool.query(database,['delvin', 'rey','DEV@gmail.com'])
+        return dbResults.rows
     }
-
 
     // User.createUser().then(result => console.log(result));
 
