@@ -1,4 +1,4 @@
-const Cars = require("../models/carsModel");
+const Cars = require("../models/carsModel.js");
 const dbPool = require("../db");
 
 const getCars = async (req, res) => {
