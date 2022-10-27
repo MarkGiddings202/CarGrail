@@ -1,4 +1,4 @@
-const userFinance = require('../models/finance');
+const userFinance = require('../models/financeModel.js');
 const dbPool = require('../db')
 // GET
 const getUsersFinances = async (req, res) =>{
