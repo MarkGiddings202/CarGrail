@@ -47,14 +47,10 @@ class User {
 
 
 // User.deleteUser().then(result => console.log(result));
-    static async updateUser(data, id){
-        const database = 'UPDATE user SET user = $1 WHERE id = $2';
-        const dbResults = await pool.query(database, [id]);
-        return dbResults.rows[0];
+//     static async updateUser(data, id){
+//         const database = 'UPDATE user SET user = $1 WHERE id = $2';
+//         const dbResults = await pool.query(database, [id]);
+//         return dbResults.rows[0];
 //     }
 
-  
-
-// }
-
-// module.exports = User
+module.exports = User;
