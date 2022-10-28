@@ -5,10 +5,9 @@
 exports.up = function(knex) {
     return knex.schema.createTable("cars", (table) => {
         table.increments("id").primary();
-        table.integer("prices").notNullable();
+        table.integer("price").notNullable();
         table.text("brand").notNullable();
-        table.integer("user_id");
-        table.foreign("user_id").references("id").inTable("users");
+        table.text('model').notNullable();
       });
 };
 

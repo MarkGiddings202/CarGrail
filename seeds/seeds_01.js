@@ -17,9 +17,9 @@ exports.seed = async function(knex) {
   ]);
   
   await knex('cars').insert([
-    {user_id: 1, brand: 'ford', prices: 20000},
-    {user_id: 2, brand: 'honda', prices: 30000},
-    {user_id: 3, brand: 'lambo', prices: 2000000}
+    {user_id: 1, brand: 'ford', price: 20000, model: 'Fusion'},
+    {user_id: 2, brand: 'honda', price: 30000, model: 'Accord'},
+    {user_id: 3, brand: 'lambo', price: 2000000, model: 'Aventador'}
   ]);
   
   
