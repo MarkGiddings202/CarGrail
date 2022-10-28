@@ -1,6 +1,7 @@
 const Users = require('../models/usersModel')
 const dbPool = require('../db')
 
+
 const createUser = async (req, res) => {
     const newUserInfo1 = { first_name: req.body.firstName, last_name: req.body.lastName, email: req.body.email };
     const newUserInfo2 = { expenses: req.body.expenses, income: req.body.income, savings: req.body.savings, user_id: req.body.savings, budget: req.body.budget };
@@ -35,6 +36,7 @@ const deleteUser = async (req, res) => {
         res.status(200).send(user);
     } else {
         res.status(404).send('Deletion Unsuccessful');
+
     }
 }
 
@@ -45,6 +47,7 @@ const updateUserInfo = async (req, res) => {
     const user = await Users.updateUser(userInfo1, userInfo2, userId);
     
     if (user) {
+
         res.status(200).send('User information successfully updated');
     } else {
         res.status(404).send();

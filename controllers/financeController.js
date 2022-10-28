@@ -1,4 +1,5 @@
-const userFinance = require('../models/finance');
+
+const userFinance = require('../models/financeModel.js');
 const dbPool = require('../db')
 
 const getUserFinances = async (req, res) => {
@@ -38,6 +39,7 @@ const getUserFinances = async (req, res) => {
 //         res.status(404).send('User does not exist');
 //     }
 // }
+
 
 
 

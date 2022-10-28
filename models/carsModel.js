@@ -1,4 +1,5 @@
-const pool = require('../db')
+
+const pool = require('../db.js')
 
 class Cars {
     static async getAllCars() {
