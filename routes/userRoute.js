@@ -5,7 +5,7 @@ const usersController = require("../controllers/usersController");
 const router = express.Router();
 
 // router.post('pathway', Controllerfunction.QueryFromModel)
-router.get("/users", usersController.getUsers);
+router.get("/", usersController.getUsers);
 // id specifies grabbing data from a db.
 router.get("/:id", usersController.getUser);
 router.delete("/:id", usersController.deleteUser);
