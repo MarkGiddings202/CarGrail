@@ -1,9 +1,15 @@
-// // const userFinance = require('../models/finance');
-// // const dbPool = require('../db')
+const userFinance = require('../models/finance');
+const dbPool = require('../db')
 
-// const getUsersFinances = async (req, res){
-//     res.status(200).send('all user finance info');
-// }
+const getUserFinances = async (req, res) => {
+    const id = req.params.id;
+    const usersFinances = await Users.getAllFinance(id);
+    if (userFinance) {
+        res.status(200).send('all user finance info');
+    } else {
+        res.status(404).send('This request cannot be made')
+    }
+}
 
 
 // const getUserFinances = async (req, res) => {
@@ -36,9 +42,9 @@
 
 
 
-// module.exports = {
-//     getUserFinances,
-//     getUsersFinances, 
-//     updateUserFinances,
-//     deleteUserFinances
-// }
+module.exports = {
+    getUserFinances
+    // getUsersFinances, 
+    // updateUserFinances,
+    // deleteUserFinances
+}
