@@ -17,6 +17,17 @@ const getUser = async (req, res) => {
   }
 };
 
+
+const createUser = async (req, res) => {
+  const newUserInfo1 = { first_name: req.body.first_name, last_name: req.body.last_name, email: req.body.email, expenses: req.body.expenses, income: req.body.income, savings: req.body.savings, user_id: req.body.savings, budget: req.body.budget };
+  const newUser = await Users.createUser(newUserInfo1);
+  if (newUser) {
+    res.status(200).send(newUser);
+  } else {
+    res.status(404).send('Invalid Entry')
+  }
+}
+
 const deleteUser = async (req, res) => {
   const userId = req.params.id;
   const user = await Users.deleteUser(userId);
@@ -53,17 +64,8 @@ const updateUserInfo = async (req, res) => {
 module.exports = {
   getUsers,
   getUser,
+  createUser,
   deleteUser,
   updateUserInfo,
 };
 
-// const createUser = async (req, res) => {
-//     const newUserInfo1 = { first_name: req.body.first_name, last_name: req.body.last_name, email: req.body.email };
-//     const newUserInfo2 = { expenses: req.body.expenses, income: req.body.income, savings: req.body.savings, user_id: req.body.savings, budget: req.body.budget };
-//     const newUser = await Users.createUser(newUserInfo1, newUserInfo2);
-//     if (newUser) {
-//         res.status(200).send(newUser);
-//     } else {
-//         res.status(404).send('Invalid Entry')
-//     }
-// }

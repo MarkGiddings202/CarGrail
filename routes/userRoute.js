@@ -8,6 +8,7 @@ const router = express.Router();
 router.get("/", usersController.getUsers);
 // id specifies grabbing data from a db.
 router.get("/:id", usersController.getUser);
+router.post('/', usersController.createUser)
 router.delete("/:id", usersController.deleteUser);
 router.put("/;id", usersController.getUser);
 

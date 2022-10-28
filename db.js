@@ -2,8 +2,8 @@ const { Pool } = require('pg')
 
 
 const pool = new Pool({
-    database: 'CarGrail',
-    user:     '',
+    database: 'cargrail',
+    user:     'postgres',
     password: ''
 })
 
