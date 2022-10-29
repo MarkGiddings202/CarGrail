@@ -1,9 +1,9 @@
-// DOM elements
-let logInBtn = document.getElementById("submitButton");
+// const url = "http://localhost:3001/users";
 
 
-//functions
-function logIn() {}
+// fetch(url).then((response) => response.json()).then( _data => console.log('asa'))
 
-//Event Listeners
-logInBtn.addEventListener("click");
+// token = "";
+
+// fetch(url, { Authorization: `Bearer ${token}`,})
+

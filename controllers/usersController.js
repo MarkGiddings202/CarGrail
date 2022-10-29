@@ -57,6 +57,7 @@ const registerUser = async (req, res) => {
       budget,
       password: hashedPassword,
     };
+    console.log(newUserInfo);
     Users.createUser(newUserInfo);
     const token = jwt.sign({ email: email }, process.env.AUTH_KEY);
     res.cookie("token", token).sendStatus(200);
@@ -75,12 +76,12 @@ const login = async (req, res) => {
       return res.status(401).send("User Does Not Exist.");
     }
 
-    const isValidPassword = await bcrypt.compare(password, user[0].password);
-    console.log(user[0].email);
+    const isValidPassword = await bcrypt.compare(password, user.password);
+    console.log(user.email);
 
     if (isValidPassword) {
-      const token = jwt.sign({ email: user[0].email }, process.env.AUTH_KEY);
-      res.cookie("token", token).status(200).send(JSON.stringify(user[0]));
+      const token = jwt.sign({ email: user.email }, process.env.AUTH_KEY);
+      res.cookie("token", token).status(200).send(JSON.stringify(user));
     }
   } catch (err) {
     res.status(500).send("An error has occured");
@@ -116,7 +117,7 @@ const updateUser = async (req, res) => {
     newIncome: income,
     newBudget: budget,
   });
-  console.log(userId, "BLAHHHHH");
+
   if (user) {
     res.status(200).send("User information successfully updated");
   } else {

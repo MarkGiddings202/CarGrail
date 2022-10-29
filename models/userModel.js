@@ -28,7 +28,8 @@ class User {
       data1.email,
       data1.password,
     ]);
-    const userId = await this.getByEmail(data1.email);
+    const { id } = await this.getByEmail(data1.email);
+
     const database2 =
       "INSERT INTO finance (expenses, income, savings, budget, user_id) VALUES ($1, $2, $3, $4, $5) RETURNING*";
     const dbResults2 = await pool.query(database2, [
@@ -36,7 +37,7 @@ class User {
       data1.income,
       data1.savings,
       data1.budget,
-      userId,
+      id,
     ]);
     return dbResults1.rows[0], dbResults2.rows[0];
   }
