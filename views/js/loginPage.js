@@ -1,6 +1,9 @@
-function logIn {
-    
-}
+// DOM elements
+let logInBtn = document.getElementById("submitButton");
 
-let logInBtn = document.getElementById("submitButton")
-logInBtn.addEventListener("click", )
+
+//functions
+function logIn() {}
+
+//Event Listeners
+logInBtn.addEventListener("click");
