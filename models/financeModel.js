@@ -1,9 +1,15 @@
 const { pool } = require('../db.js')
 
 class Finance {
-    static async getAllfinance(id) {
-        const database = 'SELECT * FROM finance WHERE user_id = $1'
+    static async getFinanceById(id) {
+        const database = 'SELECT * FROM finance WHERE user_id = $1;'
         const dbResults = await pool.query(database, [id])
+        return dbResults.rows
+    }
+
+    static async getAllFinance() {
+        const database = 'SELECT * FROM finance;'
+        const dbResults = await pool.query(database)
         return dbResults.rows
     }
 
