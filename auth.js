@@ -32,7 +32,7 @@ const authenticate = async (req, res, next) => {
     return res.status(404).send("No user found.");
   }
   req.id = user.id;
-  console.log(user, 'in auth.js')
+  console.log(user, "in auth.js");
   next();
 };
 

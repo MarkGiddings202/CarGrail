@@ -8,7 +8,6 @@ router.get("/", financeController.getUsersFinance);
 // gets a users specific finance.
 router.get("/:id", financeController.getUserFinancesID);
 // updates a users specific finance.
-// router.put("/:id", financeController.getUserFinances);
-
-
 module.exports = router;
+
+// router.put("/:id", financeController.getUserFinances);

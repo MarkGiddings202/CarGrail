@@ -28,19 +28,36 @@ const validateInputs = (email, password) => {
   return true;
 };
 
-
- // Registers user's credentials, adding them to the database using the User model
+// Registers user's credentials, adding them to the database using the User model
 const registerUser = async (req, res) => {
   try {
-    const { email, password, first_name, last_name, expenses, income, savings, budget } = req.body;
+    const {
+      email,
+      password,
+      first_name,
+      last_name,
+      expenses,
+      income,
+      savings,
+      budget,
+    } = req.body;
     if (!validateInputs(email, password)) {
       throw Error("Invalid Credentials.");
     }
-      
+
     const saltRounds = 7;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
-    const newUserInfo = { first_name, last_name, email, expenses, income, savings, budget, password: hashedPassword};
-    Users.createUser(newUserInfo)
+    const newUserInfo = {
+      first_name,
+      last_name,
+      email,
+      expenses,
+      income,
+      savings,
+      budget,
+      password: hashedPassword,
+    };
+    Users.createUser(newUserInfo);
     const token = jwt.sign({ email: email }, process.env.AUTH_KEY);
     res.cookie("token", token).sendStatus(200);
   } catch (err) {
@@ -48,9 +65,8 @@ const registerUser = async (req, res) => {
   }
 };
 
-
- //Gives the user a token after verifying user's entered credentials
- const login = async (req, res) => {
+//Gives the user a token after verifying user's entered credentials
+const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await Users.getByEmail(email);
@@ -60,7 +76,7 @@ const registerUser = async (req, res) => {
     }
 
     const isValidPassword = await bcrypt.compare(password, user[0].password);
-    console.log(user[0].email)
+    console.log(user[0].email);
 
     if (isValidPassword) {
       const token = jwt.sign({ email: user[0].email }, process.env.AUTH_KEY);
@@ -68,15 +84,14 @@ const registerUser = async (req, res) => {
     }
   } catch (err) {
     res.status(500).send("An error has occured");
-    console.log(err)
+    console.log(err);
   }
 };
 
- //Clears the user's cookie containing the token that verifies their identity
- const logout = (req, res) => {
+//Clears the user's cookie containing the token that verifies their identity
+const logout = (req, res) => {
   res.clearCookie("token").sendStatus(200);
 };
-
 
 const deleteUser = async (req, res) => {
   const userId = req.id;
@@ -91,9 +106,17 @@ const deleteUser = async (req, res) => {
 const updateUser = async (req, res) => {
   const userId = req.id;
   const { first_name, last_name, expenses, savings, income, budget } = req.body;
- 
-  const user = await Users.updateUser({ id: userId, newFN: first_name, newLN: last_name, newExpenses: expenses, newSavings: savings, newIncome: income, newBudget: budget});
-  console.log(userId, 'BLAHHHHH')
+
+  const user = await Users.updateUser({
+    id: userId,
+    newFN: first_name,
+    newLN: last_name,
+    newExpenses: expenses,
+    newSavings: savings,
+    newIncome: income,
+    newBudget: budget,
+  });
+  console.log(userId, "BLAHHHHH");
   if (user) {
     res.status(200).send("User information successfully updated");
   } else {
@@ -108,6 +131,5 @@ module.exports = {
   getUserById,
   registerUser,
   deleteUser,
-  updateUser
+  updateUser,
 };
-

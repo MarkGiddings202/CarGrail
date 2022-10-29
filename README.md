@@ -36,29 +36,26 @@
 
 > (https://www.figma.com/file/lCdLDw9F780pXbUWT7Nkae/Untitled?node-id=0%3A1)
 
-**_Contact:_**
+## Development Team
 
-Product Manager/Developer: Mark Giddings
+**Product Manager/Developer: Mark Giddings**
 
-- [LinkedIn](https://www.linkedin.com/in/mark-giddings-104a74146/)
-- [Github](https://github.com/MarkGiddings202)
+**- [LinkedIn](https://www.linkedin.com/in/mark-giddings-104a74146/)**
 
----
-
-**_Contact:_**
-
-Developer: Delvin Reyes
-
-- [LinkedIn](https://www.linkedin.com/in/delvinreyes/)
-- [Github](https://github.com/DelvinReyes95)
+**- [Github](https://github.com/MarkGiddings202)**
 
 ---
 
-**_Contact:_**
+**Developer: Delvin Reyes**
 
-Developer: Noel Fernandez
+**- [LinkedIn](https://www.linkedin.com/in/delvinreyes/)**
 
-- [LinkedIn](https://www.linkedin.com/in/noelfernandez98/)
-- [Github](https://github.com/noelfernandez98)
+**- [Github](https://github.com/DelvinReyes95)**
 
+---
 
+**Developer: Noel Fernandez**
+
+**- [LinkedIn](https://www.linkedin.com/in/noelfernandez98/)**
+
+**- [Github](https://github.com/noelfernandez98)**
