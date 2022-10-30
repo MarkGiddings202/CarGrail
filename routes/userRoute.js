@@ -10,7 +10,7 @@ router.get("/", usersController.getAllUsers);
 router.post("/login", usersController.login);
 router.get("/logout", usersController.logout);
 // id represents a specific point of data from a db.
-router.get("/:id", authenticate, usersController.getUserById);
+router.get("/getById", authenticate, usersController.getUserById);
 router.post("/", usersController.registerUser);
 router.delete("/:id", authenticate, usersController.deleteUser);
 router.put("/", authenticate, usersController.updateUser);

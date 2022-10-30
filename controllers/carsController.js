@@ -7,9 +7,8 @@ const getCars = async (req, res) => {
 };
 
 const getBudgetCars = async (req, res) => {
-  const lowerBound = req.params.carBudgetLowerBound;
-  const upperBound = req.params.carBudgetUpperBound;
-  const cars = await Cars.getBudgetCars(lowerBound, upperBound);
+  const { budget } = req.body;
+  const cars = await Cars.getBudgetCars(budget);
   if (cars.length > 0) {
     res.status(200).send(cars);
   } else {
