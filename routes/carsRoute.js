@@ -7,6 +7,6 @@ const router = express.Router();
 // gets all cars.
 router.get("/", authenticate, carsController.getCars);
 // gets budget for cars.
-router.get("/:carBudgetLowerBound/:carBudgetUpperBound",authenticate,carsController.getBudgetCars);
+router.post("/",authenticate,carsController.getBudgetCars);
 // exporting router.
 module.exports = router;

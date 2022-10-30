@@ -7,16 +7,9 @@ class Cars {
     return dbResults.rows;
   }
 
-  //needs more work. Insert lower and upper bounds based on our financial metrics.
-  static async getBudgetCars(
-    userCarBudgetRangeLowerBound,
-    userCarBudgetRangeUpperBound
-  ) {
-    const database = "SELECT * FROM cars WHERE price > $1 AND price < $2;";
-    const dbResults = await pool.query(database, [
-      userCarBudgetRangeLowerBound,
-      userCarBudgetRangeUpperBound,
-    ]);
+  static async getBudgetCars(budget) {
+    const database = "SELECT * FROM cars WHERE price < $1;";
+    const dbResults = await pool.query(database, [budget]);
     return dbResults.rows;
   }
 }

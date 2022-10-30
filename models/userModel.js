@@ -9,8 +9,10 @@ class User {
 
   static async getUser(id) {
     const database = "SELECT * FROM users where id = $1";
+    const database2 = "SELECT * FROM finance WHERE user_id = $1";
+    const dbResults2 = await pool.query(database2, [id]);
     const dbResults = await pool.query(database, [id]);
-    return dbResults.rows;
+    return {...dbResults2.rows[0], ...dbResults.rows[0]};
   }
 
   static async getByEmail(email) {
@@ -44,25 +46,25 @@ class User {
 
   static async updateUser({
     id,
-    newFirstName,
-    newLastName,
-    newExpenses,
-    newIncome,
-    newSavings,
-    newBudget,
+    first_name,
+    last_name,
+    expenses,
+    income,
+    savings,
+    budget,
   }) {
     const databaseQuery1 =
       "UPDATE users SET first_name = $1, last_name = $2 WHERE id = $3 RETURNING*";
     const databaseQuery2 =
       "UPDATE finance SET expenses = $1, income = $2, savings = $3, budget = $4 WHERE user_id = $5 RETURNING*";
     await pool
-      .query(databaseQuery1, [newFirstName, newLastName, id])
+      .query(databaseQuery1, [first_name, last_name, id])
       .then((results) => results.rows[0]);
     return await pool.query(databaseQuery2, [
-      newExpenses,
-      newIncome,
-      newSavings,
-      newBudget,
+      expenses,
+      income,
+      savings,
+      budget,
       id,
     ]);
   }

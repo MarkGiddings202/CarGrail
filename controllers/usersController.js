@@ -110,12 +110,12 @@ const updateUser = async (req, res) => {
 
   const user = await Users.updateUser({
     id: userId,
-    newFN: first_name,
-    newLN: last_name,
-    newExpenses: expenses,
-    newSavings: savings,
-    newIncome: income,
-    newBudget: budget,
+    first_name,
+    last_name,
+    expenses,
+    savings,
+    income,
+    budget,
   });
 
   if (user) {
