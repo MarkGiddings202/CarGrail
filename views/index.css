@@ -47,12 +47,14 @@ img {
 
 
 input {
-    background-color: #d9d9d9;
+    background-color: white;
+    border: 1px solid black;
     border-radius: 4px;
     opacity: 75%;
     width: 45%;
     height:30px;
-    border: none;
+    /* border: none; */
+    font-size: medium;
 
 }
 
@@ -122,4 +124,6 @@ section {
 #createAccountBox a:hover {
     color: #040972;
     transition: color .25s;
+    text-decoration: none;
+    transition: text-decoration .25s;
 }
