@@ -2,7 +2,7 @@
 
 ## Heading
 
-> CarGrail is a car app that will give its user a variety of suggestions based off of the budget & income you provide. CarGrail's mission is to make it's user be finanically prepared before going car shopping. CarGrail is used to determine the price of cars based on a users finances and helps the user by providing a plethora of cars based specifically on the users qa.
+> CarGrail is a car app that will give its user a variety of suggestions based off of the budget & income you provide. CarGrail's mission is to make it's user be finanically prepared before going car shopping. CarGrail is used to determine the price of cars based on a users finances and helps the user by providing a plethora of cars based specifically on the users budget.
 
 ## Sub-Heading
 

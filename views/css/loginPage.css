@@ -41,7 +41,11 @@ img {
     border-radius: 10px;
     background-color: white;
     box-shadow: 20px black;
+}
 
+.sign-up-form {
+    width: 50%;
+    
 }
 
 

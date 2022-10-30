@@ -44,8 +44,8 @@ class User {
 
   static async updateUser({
     id,
-    newFN, // First Name.
-    newLN, // Last Name.
+    newFirstName,
+    newLastName,
     newExpenses,
     newIncome,
     newSavings,
@@ -56,7 +56,7 @@ class User {
     const databaseQuery2 =
       "UPDATE finance SET expenses = $1, income = $2, savings = $3, budget = $4 WHERE user_id = $5 RETURNING*";
     await pool
-      .query(databaseQuery1, [newFN, newLN, id])
+      .query(databaseQuery1, [newFirstName, newLastName, id])
       .then((results) => results.rows[0]);
     return await pool.query(databaseQuery2, [
       newExpenses,
@@ -75,7 +75,7 @@ class User {
     const deleteUser = await pool.query("DELETE FROM users WHERE id = $1", [
       id,
     ]);
-    return deleteCar.rows;
+    return deleteUser.rows[0];
   }
 }
 

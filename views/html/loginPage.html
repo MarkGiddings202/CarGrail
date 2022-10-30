@@ -1,43 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="loginPage.css" type="text/css"> -->
-    <title>Login</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/loginPage.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<title>Login</title>
 </head>
+
 <body>
-    <header>
-        <!-- <img href= "" src="cloud.png"> -->
-    </header>
-    <div id="loginBox">
-        <form>
-            
-            <section id="usernameBox">
-                <label for="username">Username</label>
-                <input type="text"  id="username" name="username" required>
-            </section>
-            
-            <section id="passwordBox">
-                <label for="password"> Password</label>
-                <input type="password" id="password" name="password" required>
-            </section>
-            <section id="submitBox">
-                <input type="submit" href="http://127.0.0.1:5500/CarGrail/views/html/financePage.html" id="submitButton" value="Login">
-            </section>
-            
-        </form>
-        
-    </div>
-    <div id="createAccountBox">
-        <a href="" id="createAccount">Create Account</a>
-    </div>
-    <!-- vvv This is a Mock Login button for the time-being until we connect out backend to the front-end vvv -->
-    <button><a href="http://127.0.0.1:5500/CarGrail/views/html/financePage.html">Login</a></button>
-    <!-- ^^^ This is a Mock Login button for the time-being until we connect out backend to the front-end ^^^ -->
-    
-    <!-- <script>src="loginPage.html"</script> -->
+	<div class="sign-up-form">
+		<div class="field">
+			<label class="label">First Name</label>
+			<div class="control">
+				<input class="input" type="text" placeholder="e.g Alex">
+			</div>
+		</div>
+		<div class="field">
+			<label class="label">Last Name</label>
+			<div class="control">
+				<input class="input" type="text" placeholder="e.g Smith">
+			</div>
+		</div>
+
+		<div class="field">
+			<label class="label">Email</label>
+			<div class="control">
+				<input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+			</div>
+		</div>
+
+		<div class="field">
+			<label class="label">Expenses</label>
+			<div class="control">
+				<input class="input" type="text" placeholder="Text input">
+			</div>
+			<p class="help">This is a help text</p>
+		</div>
+		<div class="field">
+			<label class="label">Income</label>
+			<div class="control">
+				<input class="input" type="text" placeholder="Text input">
+			</div>
+			<p class="help">This is a help text</p>
+		</div>
+		<div class="field">
+			<label class="label">Budget</label>
+			<div class="control">
+				<input class="input" type="text" placeholder="Text input">
+			</div>
+			<p class="help">This is a help text</p>
+		</div>
+		<div class="field">
+			<label class="label">Savings</label>
+			<div class="control">
+				<input class="input" type="text" placeholder="Text input">
+			</div>
+			<p class="help">This is a help text</p>
+		</div>
+		<div class="field">
+			<label class="label">Password</label>
+			<div class="control">
+				<input class="input" type="password" placeholder="Text input">
+			</div>
+			<p class="help">This is a help text</p>
+		</div>
+	</div>
+
+	<script src="./loginPage.js"></script>
 </body>
 </html>
-
