@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="createAccount.js" defer></script>
+    <link id="styleSheet" rel="stylesheet" href="index2.css">
+    
+</head>
+<body>
+    <header>
+        <img href="" src="cloud.png">
+    </header>
+
+
+
+
+<form id="accountInputForm">
+    <h2>Create an Account</h2>
+    <br>
+    <section id="createFirstNameBox" class="textInput">
+        <label for="createFirstName">First Name</label>
+        <input type="text" id="createFirstName">
+    </section>
+    <section id="createLastNameBox" class="textInput">
+        <label for="createLastName">Last Name</label>
+        <input type="text" id="createLastName">
+    </section>
+    <section id="createUsernameBox" class="textInput">
+        <label for="createUsername">Username</label>
+        <input type="text" id="createUsername">
+    </section>
+    <section id="createEmailBox" class="textInput">
+        <label for="createEmail">Email</label>
+        <input type="email" id="createEmail">
+    </section>
+    <section id="createPasswordBox" class="textInput">
+        <label for="createPassword">Password</label>
+        <input type="password" id="createPassword">
+    </section>
+    <section class="nextBox" id="firstNextBox">
+        <input type="button" class="nextButton" id="firstNextButton" value="Next">
+    </section>
+</form>
+
+
+<form id="incomeForm">
+        <h2>Income (monthly)</h2>
+        <section id="createIncomeBox" class="numberInput">
+            <label for="createIncome">Gross Income</label>
+            <input type="number" id="createIncome">
+        </section>
+        <br>
+        <br>
+        <h2>Saving's (monthly)</h2>
+        <section id="createRetirementBox" class="numberInput">
+            <label for="createRetirement">Retirement</label>
+            <input type="number" id="createRetirement">
+        </section>
+        <section id="createEmergencyBox" class="numberInput">
+            <label for="createEmergency">Emergency</label>
+            <input type="number" id="createEmergency">
+        </section>
+        <section id="createOtherBox" class="numberInput">
+            <label for="createOther">Other Saving's</label>
+            <input type="number" id="createOther">
+        </section>
+        <div class="navigation">
+            <section class="backBox">
+                <input type="button" id="firstBackButton" class="backButton" value="Back">
+            </section>
+            <div></div>
+            <section class="nextBox">
+                <input type="button" class="nextButton" id="secondNextButton" value="Next">
+            </section>
+        </div>
+    </form>
+
+
+
+<form id="needsForm">
+        <h2>Need's (monthly)</h2>
+        <section id="createLivingExpenseBox" class="numberInput">
+            <div>
+                <label for="createLivingExpense">Living Expense's</label>
+                <p>(Ex. mortgage, rent)</p>
+            </div>
+            <input type="number" id="createLivingExpense" required>
+        </section>
+
+        <section id="createTransportationExpenseBox" class="numberInput">
+            <div>
+                <label for="createTransportationExpense">Transportation Expense's</label>
+                <p>(Ex. car note, public transportation)</p>
+            </div>
+            <input type="number" id="createTransportationExpense" required>
+        </section>
+
+        <section id="createInsuranceExpenseBox" class="numberInput">
+            <div>
+                <label for="creatInsuranceExpense">Insurance Expense's</label>
+                <p>(health/car)</p>
+            </div>
+            <input type="number" id="createInsuranceExpense" required>
+        </section>
+
+        <section id="createGroceriesExpenseBox" class="numberInput">
+            <label for="createGroceriesExpense">Groceries Expense's</label>
+            <input type="number" id="createGroceriesExpense" required>
+        </section>
+
+        <section id="createUtilitiesExpenseBox" class="numberInput">
+            <div>
+                <label for="createUtilitiesExpense">Utilities Expense's</label>
+                <p>(Ex. phone bill, gas/sewer/trash, internet, etc.)</p>
+            </div>
+            <input type="number" id="createUtilitiesExpense" required>
+        </section>
+
+        <section id="createPersonalCareExpenseBox" class="numberInput">
+            <div>
+                <label for="createPersonalCareExpense">Personal Care Expense's</label>
+                <p>(Ex. medication, therapy, gym membership, etc.)</p>
+            </div>
+            <input type="number" id="createPersonalCareExpense" required>
+        </section>
+
+        <section id="createOtherExpenseBox" class="numberInput">
+            <label for="createOtherExpense">Other Expense's</label>
+            <input type="number" id="createOtherExpense" required>
+        </section>
+
+        <div class="navigation">
+            <section class="backBox">
+                <input type="button" id="secondBackButton" class="backButton" value="Back">
+            </section>
+            <section class="nextBox">
+                <input type="button" class="nextButton" id="thirdNextButton" value="Next">
+            </section>
+        </div>
+
+    </form>
+
+
+<form id="wantsForm">
+        <h2>Wants (monthly)</h2>
+        <section id="createShoppingExpenseBox" class="createShoppingExpenseBox">
+            <div>
+                <label for="createShoppingExpense">Shopping Expense's</label>
+                <p>(Ex. clothes, jewelry, etc.)</p>
+            </div>
+            <input type="number" id="createShoppingExpense" required>
+        </section>
+
+        <section id="createTVExpenseBox" class="createShoppingExpenseBox">
+            <div>
+                <label for="createTVExpense">Television Expense's</label>
+                <p>(Ex. cable, streaming services, etc.)</p>
+            </div>
+            <input type="number" id="createTVExpense" required>
+        </section>
+
+        <section id="createDiningOutBox" class="createShoppingExpenseBox">
+            <label for="createDiningOut">Dining Out Expense's</label>
+            <input type="number" id="createDiningOut" required>
+        </section>
+
+        <section id="createEntertainmentExpenseBox" class="createShoppingExpenseBox">
+            <label for="createEntertainmentExpense">Entertainment Expense's</label>
+            <input type="number" id="createEntertainmentExpense" required>
+        </section>
+
+        <section id="createVacationExpenseBox" class="createShoppingExpenseBox">
+            <div>
+                <label for="createVacationExpense">Vacation Expense's</label>
+                <p>(yearly)</p>
+            </div>
+            <input type="number" id="createVacationExpense" required>
+        </section>
+
+        <section id="createOtherExpenseBox" class="createShoppingExpenseBox">
+            <label for="createOtherExpense">Other Expense's</label>
+            <input type="number" id="" required>
+        </section>
+
+        <div class="navigation">
+            <section class="backBox">
+                <input type="button" class="backButton" id="thirdBackButton" value="Back">
+            </section>
+            <section class="nextBox">
+                <input type="button" id="fourthNextButton" class="nextButton" value="Next">
+            </section>
+        </div>
+    </form>
+
+
+<form id="dreamCarForm">
+        <h2>What is Your Dream Car?</h2>
+        <section>
+            <label for="carMake">Make</label>
+            <select id="carMake" name="carMake">
+                <option value="select make">Select make</option>
+            </select>
+        </section>
+
+        <section>
+            <label for="carModel">Model</label>
+            <select id="carModel" name="carModel">
+                <option value=""></option>
+
+            </select>
+        </section>
+        <div class="navigation">
+            <section class="backBox">
+                <input type="button" class="backButton" id="fourthBackButton" value="Back">
+            </section>
+            <section id="finishBox">
+                <input type="submit" id="finishButton" value="Finish">
+            </section>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

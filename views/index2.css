@@ -175,3 +175,23 @@ width: 30%;
 #accountInputForm .textInput{
     width: 45%;
 }
+
+#firstNextBox {
+    width: 10% !important;
+}
+
+#incomeForm {
+    display: none;
+}
+
+#needsForm {
+    display: none;
+}
+
+#wantsForm {
+    display: none;
+}
+
+#dreamCarForm {
+    display:none;
+}

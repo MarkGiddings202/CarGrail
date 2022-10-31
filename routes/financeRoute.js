@@ -6,10 +6,10 @@ const router = express.Router();
 // gets all finances.
 router.get("/", financeController.getUserFinances);
 // gets a users specific finance.
-router.get("/:id", financeController.getUserFinances);
+// router.get("/:id", financeController.getUserFinances);
 // updates a users specific finance.
-router.put("/:id", financeController.getUserFinances);
+// router.put("/:id", financeController.getUserFinances);
 // deletes a users specific finance.
-router.delete("/:id", financeController.deleteUserFinances);
+// router.delete("/:id", financeController.deleteUserFinances);
 
 module.exports = router;
