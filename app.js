@@ -39,6 +39,8 @@ app.get("/", getIndexPage);
 app.get("/signup", getSignupPage);
 app.get("/home", authenticate, getHomePage);
 app.get("/finance", authenticate, getFinancePage);
+
+
 app.use("/users", userRouter);
 app.use("/finance", financeRouter);
 app.use("/cars", carsRouter);

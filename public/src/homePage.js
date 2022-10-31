@@ -2,7 +2,9 @@
 const carImageMap = {
     fordfusion: 'https://www.autotrader.com/wp-content/uploads/2020/08/WC_2019-Ford-Fusion-Hybrid-Copper-Action-1.jpg',
     hondaaccord: 'https://www.motortrend.com/uploads/2022/02/2023-Honda-Accord-rendering-01.jpg',
-    lamboaventador: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Lamborghini_Aventador_LP700-4_Orange.jpg'
+    lamboaventador: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Lamborghini_Aventador_LP700-4_Orange.jpg',
+    mtametrocard:
+    "https://www.silive.com/resizer/yQg3RAkNRo-yD2Mxpw1t8SATk2c=/arc-anglerfish-arc2-prod-advancelocal/public/GR3RKAEJJVEGDAAOJS3PYFUJR4.jpg",
 }
 
 document.getElementById("logoutBtn").addEventListener("click", (e) => {

@@ -57,7 +57,7 @@ const loginForm = () => {
 			</div>
 			<p class="help">This is a help text</p>
 		</div>
-		<input id="submitButton" type="submit" value="Log In" class="button is-success" />
+		 <input id="submitButton" type="submit" value="Log In" class="button is-success" /> 
 	</div>
 </form>
 	`

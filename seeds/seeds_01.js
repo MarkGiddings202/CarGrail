@@ -30,6 +30,7 @@ exports.seed = async function (knex) {
   ]);
  // creating mock data into database for cars table.
   await knex("cars").insert([
+    { brand: "mta", price: 60, model: "metrocard"},
     { brand: "ford", price: 20000, model: "Fusion" },
     { brand: "honda", price: 30000, model: "Accord" },
     { brand: "lambo", price: 2000000, model: "Aventador" },
