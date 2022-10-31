@@ -4,12 +4,10 @@ const financeController = require("../controllers/financeController.js");
 // we use router to get the endpoints of the url's in response of a request from client.
 const router = express.Router();
 // gets all finances.
-router.get("/", financeController.getUserFinances);
+router.get("/", financeController.getUsersFinance);
 // gets a users specific finance.
-// router.get("/:id", financeController.getUserFinances);
+router.get("/:id", financeController.getUserFinancesID);
 // updates a users specific finance.
-// router.put("/:id", financeController.getUserFinances);
-// deletes a users specific finance.
-// router.delete("/:id", financeController.deleteUserFinances);
-
 module.exports = router;
+
+// router.put("/:id", financeController.getUserFinances);

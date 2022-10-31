@@ -1,0 +1,12 @@
+ *{
+}
+
+
+.sign-up-form, .login-form {
+    width: 50%;
+    border: 5px solid black;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 15vh;
+    background-color: cornflowerblue !important;}
+

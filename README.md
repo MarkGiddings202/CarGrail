@@ -2,7 +2,7 @@
 
 ## Heading
 
-> CarGrail is a car app that will give its user a variety of suggestions based off of the budget & income you provide. CarGrail's mission is to make it's user be finanically prepared before going car shopping. CarGrail is used to determine the price of cars based on a users finances and helps the user by providing a plethora of cars based specifically on the users qa.
+> CarGrail is a car app that will give its user a variety of suggestions based off of the budget & income you provide. CarGrail's mission is to make it's user be finanically prepared before going car shopping. CarGrail is used to determine the price of cars based on a users finances and helps the user by providing a plethora of cars based specifically on the users budget.
 
 ## Sub-Heading
 
@@ -36,29 +36,26 @@
 
 > (https://www.figma.com/file/lCdLDw9F780pXbUWT7Nkae/Untitled?node-id=0%3A1)
 
-**_Contact:_**
+## Development Team
 
-Product Manager/Developer: Mark Giddings
+**Product Manager/Developer: Mark Giddings**
 
-- [LinkedIn](https://www.linkedin.com/in/mark-giddings-104a74146/)
-- [Github](https://github.com/MarkGiddings202)
+**- [LinkedIn](https://www.linkedin.com/in/mark-giddings-104a74146/)**
 
----
-
-**_Contact:_**
-
-Developer: Delvin Reyes
-
-- [LinkedIn](https://www.linkedin.com/in/delvinreyes/)
-- [Github](https://github.com/DelvinReyes95)
+**- [Github](https://github.com/MarkGiddings202)**
 
 ---
 
-**_Contact:_**
+**Developer: Delvin Reyes**
 
-Developer: Noel Fernandez
+**- [LinkedIn](https://www.linkedin.com/in/delvinreyes/)**
 
-- [LinkedIn](https://www.linkedin.com/in/noelfernandez98/)
-- [Github](https://github.com/noelfernandez98)
+**- [Github](https://github.com/DelvinReyes95)**
 
+---
 
+**Developer: Noel Fernandez**
+
+**- [LinkedIn](https://www.linkedin.com/in/noelfernandez98/)**
+
+**- [Github](https://github.com/noelfernandez98)**

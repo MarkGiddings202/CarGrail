@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/loginPage.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<title>Sign Up</title>
+</head>
+
+<body>
+	<div id="signup-form-container">
+		<form id="signup-form">
+			<div class="sign-up-form">
+				<div class="field">
+					<label class="label">First Name</label>
+					<div class="control">
+						<input id="first_name" name="first_name" class="input" type="text" placeholder="e.g Alex">
+					</div>
+				</div>
+				<div class="field">
+					<label class="label">Last Name</label>
+					<div class="control">
+						<input id="last_name" name="last_name" class="input" type="text" placeholder="e.g Smith">
+					</div>
+				</div>
+		
+				<div class="field">
+					<label class="label">Email</label>
+					<div class="control">
+						<input id="email" name="email" class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+					</div>
+				</div>
+		
+				<div class="field">
+					<label class="label">Expenses</label>
+					<div class="control">
+						<input id="expenses" name="expenses" class="input" type="text" placeholder="Text input">
+					</div>
+					<p class="help">This is a help text</p>
+				</div>
+				<div class="field">
+					<label class="label">Income</label>
+					<div class="control">
+						<input id="income" name="income" class="input" type="text" placeholder="Text input">
+					</div>
+					<p class="help">This is a help text</p>
+				</div>
+				<div class="field">
+					<label class="label">Budget</label>
+					<div class="control">
+						<input id="budget" name="budget" class="input" type="text" placeholder="Text input">
+					</div>
+					<p class="help">This is a help text</p>
+				</div>
+				<div class="field">
+					<label class="label">Savings</label>
+					<div class="control">
+						<input id="savings" name="savings" class="input" type="text" placeholder="Text input">
+					</div>
+					<p class="help">This is a help text</p>
+				</div>
+				<div class="field">
+					<label class="label">Password</label>
+					<div class="control">
+						<input id="password" name="password" class="input" type="password" placeholder="Text input">
+					</div>
+					<p class="help">This is a help text</p>
+				</div>
+				<input id="submitButton" type="submit" value="Sign Up" class="button is-success" />
+			</div>
+		</form>
+		<button id='loginButton' class="button is-success">Log In</button>
+	</div>
+	
+
+	<script src="../src/loginPage.js"></script>
+</body>
+</html>
