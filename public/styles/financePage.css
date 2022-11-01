@@ -6,10 +6,6 @@
     margin-top: 15vh;
 }
 
-/* * {
-    padding: 0px;
-    margin: 0px;
-} */
 html{
     background-color: #89CFF0;
 }
@@ -23,58 +19,6 @@ body {
     justify-content: center; */
 }
 
-/* header {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-    /* align-items: center;
-    justify-content: center;
-    flex-direction: row; */
-    /* padding-top: px; */
-/* } */ 
-
-/* img {
-    width: 18%;
-    height: 18%;
-} */
-
-/* form {
-        position: relative;
-        width: 62%;
-        height: 43vh;
-        margin-top: 4vh;
-        background-color: white;
-        border-radius: 12px;
-        padding: 6vh 8vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    section {
-        display: flex;
-        flex-direction: row;
-        /* background-color: blue; */
-width: 56%;
-height: 100%;
-margin-top: 20px;
-align-items: center;
-justify-content: space-between;
-}
-
-input {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 4px;
-    /* opacity: 75%; */
-    width: 60%;
-    height: 30px;
-    /* border: none; */
-    font-size: medium;
-
-}
 
 .nextBox {
     display: flex;
@@ -186,4 +130,3 @@ input {
     width: 45%;
 }
 
-*/

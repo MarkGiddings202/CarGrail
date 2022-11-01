@@ -125,10 +125,8 @@ section {
 #createAccountBox a:hover {
     color: #040972;
     transition: color .25s;
-<<<<<<< HEAD:views/index.css
     text-decoration: none;
     transition: text-decoration .25s;
-=======
 }
 
 #signUpDiv{
@@ -150,5 +148,4 @@ section {
 
 #signUpDiv:hover {
     background-color: bisque;
->>>>>>> main:public/styles/index.css
 }
