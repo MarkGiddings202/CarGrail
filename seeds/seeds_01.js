@@ -28,23 +28,22 @@ exports.seed = async function (knex) {
       password: "uhdhydtt",
     },
   ]);
- // creating mock data into database for cars table.
+  // creating mock data into database for cars table.
   await knex("cars").insert([
-    { brand: "mta", price: 60, model: "metrocard"},
-    { brand: "lectricxp", price: 899, model: "eBike"},
-    { brand: "volkswagen", price: 7000, model: "tiguan"},
-    { brand: "mazda", price: 15000, model: "3"},
-    { brand: "nissan", price: 23990, model: "Altima"},
+    { brand: "mta", price: 60, model: "metrocard" },
+    { brand: "lectricxp", price: 899, model: "eBike" },
+    { brand: "volkswagen", price: 7000, model: "tiguan" },
+    { brand: "mazda", price: 15000, model: "3" },
+    { brand: "nissan", price: 23990, model: "Altima" },
     { brand: "ford", price: 22990, model: "Fusion" },
-    { brand: "toyota", price: 30695, model: "camry"},
+    { brand: "toyota", price: 30695, model: "camry" },
     { brand: "honda", price: 29500, model: "Accord" },
     { brand: "tesla", price: 135990, model: "s" },
     { brand: "bmw", price: 29500, model: "x" },
     { brand: "rangerover", price: 121500, model: "suv" },
-    { brand: "lambo", price: 546847, model: "Aventador"},
-
+    { brand: "lambo", price: 546847, model: "Aventador" },
   ]);
- // creating mock data into database for finance table.
+  // creating mock data into database for finance table.
   await knex("finance").insert([
     {
       expenses: 12000,

@@ -1,46 +1,45 @@
-if(document.cookie) {
-	window.location = '/home'
+if (document.cookie) {
+  window.location = "/home";
 }
 
+const signupForm = document.getElementById("signup-form");
+const formContainer = document.getElementById("signup-form-container");
+const getLoginBtn = document.getElementById("loginButton");
 
-const signupForm = document.getElementById('signup-form');
-const formContainer = document.getElementById('signup-form-container');
-const getLoginBtn = document.getElementById('loginButton');
-
-const REGISTER_API = '/users';
-const LOGIN_API = '/users/login';
+const REGISTER_API = "/users";
+const LOGIN_API = "/users/login";
 
 const formatFormData = (rawFormData) => {
-    const formObj = {}
-    for (item of rawFormData) {
-        formObj[item[0]] = item[1]
-    }
-    return formObj;
-}
+  const formObj = {};
+  for (item of rawFormData) {
+    formObj[item[0]] = item[1];
+  }
+  return formObj;
+};
 
 const registerNewUser = async (apiEndpoint, data) => {
-	try {
-		const response = await axios.post(apiEndpoint, data)
-		console.log(response);
-	} catch (err){
-		console.log(err);
-	}
-}
+  try {
+    const response = await axios.post(apiEndpoint, data);
+    console.log(response);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 const loginUser = async (apiEndpoint, data) => {
-	try {
-		const response = await axios.post(apiEndpoint, data)
-		console.log(response);
-		if(document.cookie) {
-			window.location = '/home';
-		}
-	} catch (err){
-		console.log(err);
-	}
-}
+  try {
+    const response = await axios.post(apiEndpoint, data);
+    console.log(response);
+    if (document.cookie) {
+      window.location = "/home";
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 const loginForm = () => {
-	return `
+  return `
 	<form id="login-form">
 	<div class="login-form">
 	<h1>Log In </h1>
@@ -60,41 +59,33 @@ const loginForm = () => {
 		 <input id="submitButton" type="submit" value="Log In" class="button is-success" /> 
 	</div>
 </form>
-	`
-}
+	`;
+};
 
 const swapToLogin = () => {
-	formContainer.innerHTML = loginForm();
-	const loginHtmlForm = document.getElementById("login-form");
-		loginHtmlForm.addEventListener('submit', (e) => {
-			e.preventDefault();
-			const loginFormData = new FormData(loginHtmlForm);
-			const loginData = formatFormData(loginFormData);
-			loginUser(LOGIN_API, loginData);
-		})
-}
+  formContainer.innerHTML = loginForm();
+  const loginHtmlForm = document.getElementById("login-form");
+  loginHtmlForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const loginFormData = new FormData(loginHtmlForm);
+    const loginData = formatFormData(loginFormData);
+    loginUser(LOGIN_API, loginData);
+  });
+};
 
 if (window.location.search) {
-	swapToLogin();
+  swapToLogin();
 }
 
+signupForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const signupFormData = new FormData(signupForm);
+  const signupData = formatFormData(signupFormData);
+  // send a POST request
+  registerNewUser(REGISTER_API, signupData);
+  swapToLogin();
+});
 
-signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const signupFormData = new FormData(signupForm);
-    const signupData = formatFormData(signupFormData);
-    // send a POST request   
-    registerNewUser(REGISTER_API, signupData);
-		swapToLogin()
-})
-
-getLoginBtn.addEventListener('click', (e) => {
-	swapToLogin()
-})
-
-
-
-
-
-
-
+getLoginBtn.addEventListener("click", (e) => {
+  swapToLogin();
+});

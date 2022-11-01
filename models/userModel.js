@@ -12,7 +12,7 @@ class User {
     const database2 = "SELECT * FROM finance WHERE user_id = $1";
     const dbResults2 = await pool.query(database2, [id]);
     const dbResults = await pool.query(database, [id]);
-    return {...dbResults2.rows[0], ...dbResults.rows[0]};
+    return { ...dbResults2.rows[0], ...dbResults.rows[0] };
   }
 
   static async getByEmail(email) {

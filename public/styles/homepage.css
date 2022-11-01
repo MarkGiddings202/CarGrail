@@ -1,71 +1,76 @@
-body{
-    background-color:#18191a
+body {
+  background-color: #18191a;
+}
+html {
+  background-color: #18191a;
 }
 
-#cloud{
-    
-}
-
-#navbarBasicExample{
-background-color: #18191a;
-height: 100px;
-/* size: ; */
+#navbarBasicExample {
+  background-color: #18191a;
+  height: 100px;
+  /* size: ; */
 }
 .navbar-item {
-    background-color: #18191a;
+  background-color: #18191a;
 }
-.navbar-item, a {
-    color: white;
-    font-size: 2rem;
-
+.navbar-item,
+a {
+  color: white;
+  font-size: 2rem;
 }
 #header {
-    animation: color-change 3s infinite;
+  animation: color-change 3s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: red;
   }
-  
-  @keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
+  50% {
+    color: blue;
   }
+  100% {
+    color: red;
+  }
+}
 
 #header {
-    /* font-family: Arial, Helvetica, sans-serif; */
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    font-size: 40px;
-    color: aliceblue;
-    margin-top: 20px;
-  }
+  /* font-family: Arial, Helvetica, sans-serif; */
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  font-size: 40px;
+  color: aliceblue;
+  margin-top: 20px;
+}
 
 .car-image {
-    width: 250px;
-    height: 250px;
+  width: 250px;
+  height: 250px;
 }
 
 .card {
-    width: 500px;
-    margin: 0 auto;
-    margin: 25px;
-    margin-top: 200px;
-    /* box-shadow: 5px 10px; */
-    box-shadow: 5px 10px #888888;
+  width: 500px;
+  margin: 0 auto;
+  margin: 25px;
+  margin-top: 200px;
+  /* box-shadow: 5px 10px; */
+  box-shadow: 5px 10px #888888;
 }
 .card :hover {
-    background-color:#03d1b2 ;
+  background-color: #03d1b2;
 }
-#cars-container{
-    width: 100%;
-    margin-left: 50%;
-    margin-right: 50%;
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
+#cars-container {
+  width: 100%;
+  margin-left: 50%;
+  margin-right: 50%;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-#cars-wrapper{
-    width: 100%;
-    justify-content: center;
-    display: flex;
+#cars-wrapper {
+  width: 100%;
+  justify-content: center;
+  display: flex;
 }
