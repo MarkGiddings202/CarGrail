@@ -32,9 +32,11 @@ exports.seed = async function (knex) {
   await knex("cars").insert([
     { brand: "mta", price: 60, model: "metrocard"},
     { brand: "lectricxp", price: 899, model: "eBike"},
+    { brand: "volkswagen", price: 7000, model: "tiguan"},
+    { brand: "mazda", price: 15000, model: "3"},
     { brand: "nissan", price: 23990, model: "Altima"},
-    { brand: "toyota", price: 30695, model: "camry"},
     { brand: "ford", price: 22990, model: "Fusion" },
+    { brand: "toyota", price: 30695, model: "camry"},
     { brand: "honda", price: 29500, model: "Accord" },
     { brand: "tesla", price: 135990, model: "s" },
     { brand: "bmw", price: 29500, model: "x" },
